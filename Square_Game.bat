@@ -195,9 +195,9 @@ echo   6  %space_05% %space_06% %space_07% %space_08%
 echo   7  %space_09% %space_10% %space_11% %space_12%
 echo   8  %space_13% %space_14% %space_15% %space_16%
 echo.
-if %moves% geq 10000 echo You must be hacking...&& goto secret_end
-if %moves% geq 1000 echo Why have you done this?!&& goto secret_end
-if %moves% geq 100 echo Why and how did you use 100 moves..?&& goto secret_end
+::if %moves% geq 10000 echo You must be hacking...&& goto secret_end
+::if %moves% geq 1000 echo Why have you done this?!&& goto secret_end
+::if %moves% geq 100 echo Why and how did you use 100 moves..?&& goto secret_end
 if %moves% lss 0 echo How did you move a negative amount of times..?&& goto secret_end
 :secret_end
 
