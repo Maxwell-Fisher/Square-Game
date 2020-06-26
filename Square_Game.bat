@@ -1,16 +1,28 @@
 @echo off
-set theme=paper
-set moves=0
+setlocal Enabledelayedexpansion
+setlocal
+call :setESC
+set theme=color
+set color1_1=%ESC%[41m
+set color1_2=%ESC%[0m%ESC%[37m
+set color2_1=%ESC%[43m
+set color2_2=%ESC%[0m%ESC%[37m
+set color3_1=%ESC%[42m
+set color3_2=%ESC%[0m%ESC%[37m
+set color4_1=%ESC%[44m
+set color4_2=%ESC%[0m%ESC%[37m
 set looptimes=0
 set scramble=[
 set solution=[
 :start
+set moves=0
 title Square Game
-mode 51,14
+mode 51,15
 set dev=0
 if "%theme%" == "paper" color F0
 if "%theme%" == "hacker" color 0A
 if "%theme%" == "invert" color 0F
+if "%theme%" == "color" color 07
 cls
 :mode_start
 echo Press Z for zen mode
@@ -20,16 +32,18 @@ echo When in a game, you can press 0 to access the menu
 if "%theme%" == "paper" color F0
 if "%theme%" == "hacker" color 0A
 if "%theme%" == "invert" color 0F
+if "%theme%" == "color" color 07
 set mode=null
-choice /c ZCQIPHDNME >nul
+choice /c ZCQIPHDNMEL >nul
 set mode=%errorlevel%
-::z=zen, c=challenge, q=credits, i=invert, p=paper, h=hacker, d=dev
+::z=zen, c=challenge, q=credits, i=invert, p=paper, h=hacker, d=dev, l=color
 if "%mode%" == "8" set solution=%solution%0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&&set moves=100
 if "%mode%" == "9" set solution=Hacks&& set scramble=[None&& set moves=999999999
 if "%mode%" == "10" set scramble=[None&& set solution=[There was no solution, only cheats.&& goto win
-if "%mode%" == "4" set theme=invert
-if "%mode%" == "5" set theme=paper
-if "%mode%" == "6" set theme=hacker
+if "%mode%" == "4" set theme=invert&& goto notcolor
+if "%mode%" == "5" set theme=paper&& goto notcolor
+if "%mode%" == "6" set theme=hacker&& goto notcolor
+if "%mode%" == "11" goto color
 if "%mode%" == "7" if "%dev%"=="0" goto dev
 if "%mode%" == "3" cls&& echo Made by Maxwell Fisher&& title Maxwell Fisher&& echo. && goto mode_start
 
@@ -39,9 +53,34 @@ if "%mode%" == "2" mode 21,2&& goto challenge
 ::goto mode_select
 goto start
 
+:color
+set theme=color
+::Why does Windows not allow colour, only color??? It just makes everything more confusing :(
+set color1_1=%ESC%[41m
+set color1_2=%ESC%[0m%ESC%[37m
+set color2_1=%ESC%[43m
+set color2_2=%ESC%[0m%ESC%[37m
+set color3_1=%ESC%[42m
+set color3_2=%ESC%[0m%ESC%[37m
+set color4_1=%ESC%[44m
+set color4_2=%ESC%[0m%ESC%[37m
+goto start
+
+:notcolor
+set color1_1=
+set color1_2=
+set color2_1=
+set color2_2=
+set color3_1=
+set color3_2=
+set color4_1=
+set color4_2=
+goto start
+
 :dev
 echo.
 set dev=1
+echo Dev mode:
 echo Press N to add 100 moves
 echo Press M to add 999,999,999 moves
 echo Press E to go to end screen
@@ -55,22 +94,22 @@ goto mode_select
 :challenge
 echo Randomizing board...
 
-set space_01=[01]
-set space_02=[02]
-set space_03=[03]
-set space_04=[04]
-set space_05=[05]
-set space_06=[06]
-set space_07=[07]
-set space_08=[08]
-set space_09=[09]
-set space_10=[10]
-set space_11=[11]
-set space_12=[12]
-set space_13=[13]
-set space_14=[14]
-set space_15=[15]
-set space_16=[16]
+set space_01=%color1_1%01%color1_2%
+set space_02=%color1_1%02%color1_2%
+set space_03=%color1_1%03%color1_2%
+set space_04=%color1_1%04%color1_2%
+set space_05=%color2_1%05%color2_2%
+set space_06=%color2_1%06%color2_2%
+set space_07=%color2_1%07%color2_2%
+set space_08=%color2_1%08%color2_2%
+set space_09=%color3_1%09%color3_2%
+set space_10=%color3_1%10%color3_2%
+set space_11=%color3_1%11%color3_2%
+set space_12=%color3_1%12%color3_2%
+set space_13=%color4_1%13%color4_2%
+set space_14=%color4_1%14%color4_2%
+set space_15=%color4_1%15%color4_2%
+set space_16=%color4_1%16%color4_2%
 
 ::helps with randomizing the generated numbers
 ping 127.0.0.1 -n %random:~0,1% >nul
@@ -160,28 +199,28 @@ set space_16=%old_15%
 goto random-loop
 
 :zen
-set space_01=[01]
-set space_02=[02]
-set space_03=[03]
-set space_04=[04]
-set space_05=[05]
-set space_06=[06]
-set space_07=[07]
-set space_08=[08]
-set space_09=[09]
-set space_10=[10]
-set space_11=[11]
-set space_12=[12]
-set space_13=[13]
-set space_14=[14]
-set space_15=[15]
-set space_16=[16]
+set space_01=%color1_1%01%color1_2%
+set space_02=%color1_1%02%color1_2%
+set space_03=%color1_1%03%color1_2%
+set space_04=%color1_1%04%color1_2%
+set space_05=%color2_1%05%color2_2%
+set space_06=%color2_1%06%color2_2%
+set space_07=%color2_1%07%color2_2%
+set space_08=%color2_1%08%color2_2%
+set space_09=%color3_1%09%color3_2%
+set space_10=%color3_1%10%color3_2%
+set space_11=%color3_1%11%color3_2%
+set space_12=%color3_1%12%color3_2%
+set space_13=%color4_1%13%color4_2%
+set space_14=%color4_1%14%color4_2%
+set space_15=%color4_1%15%color4_2%
+set space_16=%color4_1%16%color4_2%
 goto beginning
 
 
 :beginning
 :print
-mode 26,9
+mode 17,7
 if "%mode%" == "2" goto check_win
 goto dont_check_win
 :check_win
@@ -189,12 +228,11 @@ if "%space_01% %space_02% %space_03% %space_04% %space_05% %space_06% %space_07%
 :dont_check_win
 cls
 echo   %moves% moves
-echo       1    2    3    4
-echo   5  %space_01% %space_02% %space_03% %space_04%
-echo   6  %space_05% %space_06% %space_07% %space_08%
-echo   7  %space_09% %space_10% %space_11% %space_12%
-echo   8  %space_13% %space_14% %space_15% %space_16%
-echo.
+echo     1  2  3  4
+echo   5 %space_01% %space_02% %space_03% %space_04%
+echo   6 %space_05% %space_06% %space_07% %space_08%
+echo   7 %space_09% %space_10% %space_11% %space_12%
+echo   8 %space_13% %space_14% %space_15% %space_16%
 ::if %moves% geq 10000 echo You must be hacking...&& goto secret_end
 ::if %moves% geq 1000 echo Why have you done this?!&& goto secret_end
 ::if %moves% geq 100 echo Why and how did you use 100 moves..?&& goto secret_end
@@ -303,6 +341,7 @@ goto print
 
 :input_0
 cls
+mode 20,4
 echo Press H to go home
 echo Press C to cancel
 echo Press Q to quit
@@ -426,6 +465,7 @@ cls
 if "%theme%" == "paper" color F0
 if "%theme%" == "hacker" color 0A
 if "%theme%" == "invert" color 0F
+if "%theme%" == "color" color 07
 echo It took you %moves% moves
 if "%moves%" == "0" set moves=10000
 if "%score%" NEQ "0" set /a score=10000/%moves%
@@ -440,3 +480,8 @@ if "%end-choice%"=="1" goto start
 if "%end-choice%"=="2" exit
 if "%end-choice%"=="3" echo The scramble that you had was %scramble%]&& echo Your solution was %solution%]&& goto end-choice
 goto end
+
+:setESC
+for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
+  set ESC=%%b
+)
