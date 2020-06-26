@@ -11,14 +11,13 @@ set color3_1=%ESC%[42m
 set color3_2=%ESC%[0m%ESC%[37m
 set color4_1=%ESC%[44m
 set color4_2=%ESC%[0m%ESC%[37m
-for /F "usebackq" %%A IN ('%~f0') do set filesize=%%~zA
 set looptimes=0
 set scramble=[
 set solution=[
 :start
 set moves=0
 title Square Game
-mode 51,16
+mode 51,15
 set dev=0
 if "%theme%" == "paper" color F0
 if "%theme%" == "hacker" color 0A
@@ -26,7 +25,6 @@ if "%theme%" == "invert" color 0F
 if "%theme%" == "color" color 07
 cls
 :mode_start
-if not "%filesize%"=="13788" echo Messing with things, are we?
 echo Press Z for zen mode
 echo Press C for challenge mode
 echo When in a game, you can press 0 to access the menu
