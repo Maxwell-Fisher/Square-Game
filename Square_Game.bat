@@ -358,106 +358,11 @@ cls
 title You win!
 echo.
 echo You win!
-ping 127.0.0.1 -n 1 >nul&& color 00
-ping 127.0.0.1 -n 1 >nul&& color 01
-ping 127.0.0.1 -n 1 >nul&& color 02
-ping 127.0.0.1 -n 1 >nul&& color 03
-ping 127.0.0.1 -n 1 >nul&& color 04
-ping 127.0.0.1 -n 1 >nul&& color 05
-ping 127.0.0.1 -n 1 >nul&& color 06
-ping 127.0.0.1 -n 1 >nul&& color 07
-ping 127.0.0.1 -n 1 >nul&& color 08
-ping 127.0.0.1 -n 1 >nul&& color 09
-ping 127.0.0.1 -n 1 >nul&& color 10
-ping 127.0.0.1 -n 1 >nul&& color 11
-ping 127.0.0.1 -n 1 >nul&& color 12
-ping 127.0.0.1 -n 1 >nul&& color 13
-ping 127.0.0.1 -n 1 >nul&& color 14
-ping 127.0.0.1 -n 1 >nul&& color 15
-ping 127.0.0.1 -n 1 >nul&& color 16
-ping 127.0.0.1 -n 1 >nul&& color 17
-ping 127.0.0.1 -n 1 >nul&& color 18
-ping 127.0.0.1 -n 1 >nul&& color 19
-ping 127.0.0.1 -n 1 >nul&& color 20
-ping 127.0.0.1 -n 1 >nul&& color 21
-ping 127.0.0.1 -n 1 >nul&& color 22
-ping 127.0.0.1 -n 1 >nul&& color 23
-ping 127.0.0.1 -n 1 >nul&& color 24
-ping 127.0.0.1 -n 1 >nul&& color 25
-ping 127.0.0.1 -n 1 >nul&& color 26
-ping 127.0.0.1 -n 1 >nul&& color 27
-ping 127.0.0.1 -n 1 >nul&& color 28
-ping 127.0.0.1 -n 1 >nul&& color 29
-ping 127.0.0.1 -n 1 >nul&& color 30
-ping 127.0.0.1 -n 1 >nul&& color 31
-ping 127.0.0.1 -n 1 >nul&& color 32
-ping 127.0.0.1 -n 1 >nul&& color 33
-ping 127.0.0.1 -n 1 >nul&& color 34
-ping 127.0.0.1 -n 1 >nul&& color 35
-ping 127.0.0.1 -n 1 >nul&& color 36
-ping 127.0.0.1 -n 1 >nul&& color 37
-ping 127.0.0.1 -n 1 >nul&& color 38
-ping 127.0.0.1 -n 1 >nul&& color 39
-ping 127.0.0.1 -n 1 >nul&& color 40
-ping 127.0.0.1 -n 1 >nul&& color 41
-ping 127.0.0.1 -n 1 >nul&& color 42
-ping 127.0.0.1 -n 1 >nul&& color 43
-ping 127.0.0.1 -n 1 >nul&& color 44
-ping 127.0.0.1 -n 1 >nul&& color 45
-ping 127.0.0.1 -n 1 >nul&& color 46
-ping 127.0.0.1 -n 1 >nul&& color 47
-ping 127.0.0.1 -n 1 >nul&& color 48
-ping 127.0.0.1 -n 1 >nul&& color 49
-ping 127.0.0.1 -n 1 >nul&& color 50
-ping 127.0.0.1 -n 1 >nul&& color 51
-ping 127.0.0.1 -n 1 >nul&& color 52
-ping 127.0.0.1 -n 1 >nul&& color 53
-ping 127.0.0.1 -n 1 >nul&& color 54
-ping 127.0.0.1 -n 1 >nul&& color 55
-ping 127.0.0.1 -n 1 >nul&& color 56
-ping 127.0.0.1 -n 1 >nul&& color 57
-ping 127.0.0.1 -n 1 >nul&& color 58
-ping 127.0.0.1 -n 1 >nul&& color 59
-ping 127.0.0.1 -n 1 >nul&& color 60
-ping 127.0.0.1 -n 1 >nul&& color 61
-ping 127.0.0.1 -n 1 >nul&& color 62
-ping 127.0.0.1 -n 1 >nul&& color 63
-ping 127.0.0.1 -n 1 >nul&& color 64
-ping 127.0.0.1 -n 1 >nul&& color 65
-ping 127.0.0.1 -n 1 >nul&& color 66
-ping 127.0.0.1 -n 1 >nul&& color 67
-ping 127.0.0.1 -n 1 >nul&& color 68
-ping 127.0.0.1 -n 1 >nul&& color 69
-ping 127.0.0.1 -n 1 >nul&& color 70
-ping 127.0.0.1 -n 1 >nul&& color 71
-ping 127.0.0.1 -n 1 >nul&& color 72
-ping 127.0.0.1 -n 1 >nul&& color 73
-ping 127.0.0.1 -n 1 >nul&& color 74
-ping 127.0.0.1 -n 1 >nul&& color 75
-ping 127.0.0.1 -n 1 >nul&& color 76
-ping 127.0.0.1 -n 1 >nul&& color 77
-ping 127.0.0.1 -n 1 >nul&& color 78
-ping 127.0.0.1 -n 1 >nul&& color 79
-ping 127.0.0.1 -n 1 >nul&& color 80
-ping 127.0.0.1 -n 1 >nul&& color 81
-ping 127.0.0.1 -n 1 >nul&& color 82
-ping 127.0.0.1 -n 1 >nul&& color 83
-ping 127.0.0.1 -n 1 >nul&& color 84
-ping 127.0.0.1 -n 1 >nul&& color 85
-ping 127.0.0.1 -n 1 >nul&& color 86
-ping 127.0.0.1 -n 1 >nul&& color 87
-ping 127.0.0.1 -n 1 >nul&& color 88
-ping 127.0.0.1 -n 1 >nul&& color 89
-ping 127.0.0.1 -n 1 >nul&& color 90
-ping 127.0.0.1 -n 1 >nul&& color 91
-ping 127.0.0.1 -n 1 >nul&& color 92
-ping 127.0.0.1 -n 1 >nul&& color 93
-ping 127.0.0.1 -n 1 >nul&& color 94
-ping 127.0.0.1 -n 1 >nul&& color 95
-ping 127.0.0.1 -n 1 >nul&& color 96
-ping 127.0.0.1 -n 1 >nul&& color 97
-ping 127.0.0.1 -n 1 >nul&& color 98
-ping 127.0.0.1 -n 1 >nul&& color 99
+
+for /l %%x in (0, 1, 99) do (
+ping 127.0.0.1 -n 1 >nul&& color %%x
+)
+
 ping 127.0.0.1 -n 1 >nul
 :end
 mode 101,8
